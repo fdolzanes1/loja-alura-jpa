@@ -1,11 +1,12 @@
 package br.com.dolzanes.model;
 
+import br.com.dolzanes.model.*;
 import java.math.BigDecimal;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,6 +19,16 @@ public class Product {
 	private String name;
 	private String description;
 	private BigDecimal price;
+	
+	@ManyToOne
+	private Category category;
+	
+	public Product(String name, String description, BigDecimal price, Category category) {
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.category = category;
+	}
 	
 	public Long getId() {
 		return id;
@@ -42,6 +53,14 @@ public class Product {
 	}
 	public void setPrice(BigDecimal price) {
 		this.price = price;
+	}
+	
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategoria(Category category) {
+		this.category = category;
 	}
 
 	
