@@ -16,4 +16,13 @@ public class ProductDAO {
 		this.em.persist(product);
 	}
 	
+	public void update(Product product) {
+		this.em.merge(product);
+	}
+	
+	public void delete(Product product) {
+		product = em.merge(product);
+		this.em.remove(product);
+	}
+	
 }
