@@ -25,5 +25,9 @@ public class CategoryDAO {
 		category = em.merge(category);
 		this.em.remove(category);
 	}
+	
+	public Category findById(Long id) {
+		return em.find(Category.class, id);
+	}
 
 }
