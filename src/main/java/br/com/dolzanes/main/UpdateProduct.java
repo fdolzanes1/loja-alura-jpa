@@ -21,7 +21,7 @@ public class UpdateProduct {
 		smartphone.setId(2L);
 		smartphone.setName("Motorola EDGE");
 		smartphone.setDescription("32GB 100mp");
-		smartphone.setPrice(new BigDecimal("2000"));
+		smartphone.setPrice(2000.0);
 		
 		productDao.update(smartphone);
 		

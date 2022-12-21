@@ -15,7 +15,7 @@ public class CreateProductCategory {
 	public static void main(String[] args) {
 		
 		Category category = new Category("Smartphone");
-		Product smartphone = new Product("Motorola EDGE", "Muito legal", new BigDecimal("500"), category);
+		Product smartphone = new Product("Motorola EDGE", "Muito legal", 500.0, category);
 		
 		EntityManager entityManager = JPAUtil.getEntityManager();
 		
