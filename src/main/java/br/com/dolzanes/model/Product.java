@@ -18,14 +18,14 @@ public class Product {
 	private Long id;
 	private String name;
 	private String description;
-	private BigDecimal price;
+	private Double price;
 	
 	@ManyToOne
 	private Category category;
-	
+		
 	public Product() {};
 	
-	public Product(String name, String description, BigDecimal price, Category category) {
+	public Product(String name, String description, Double price, Category category) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -50,10 +50,10 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public BigDecimal getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(BigDecimal price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 	
